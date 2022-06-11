@@ -18,4 +18,19 @@ function distanceFromHqInFeet(someValue) {
   }
 
 
-  
+  function calculatesFarePrice(start, destination) {
+    let feet = destination - start;
+    console.log(feet);
+    if(feet < 400) {
+        return "free";
+    }
+    else if(feet > 400 && feet < 2000) {
+        return Math.round((feet - 400) * 0.2);
+    }
+    else if(feet >= 2000 && feet <= 2500) {
+        return 9000;
+    }
+    else {
+        return "cannot travel that far";
+    }
+  }
